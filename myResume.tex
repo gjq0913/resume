@@ -1,0 +1,90 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{郭嘉庆}
+
+\basicInfo{
+  \email{648591658@qq.com} \textperiodcentered\ 
+  \phone{(+86) 13669223711}
+} 
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{清华大学}, 北京}{2019年8月 -- 2022年7月}
+\textit{硕士研究生}\ 电气工程及其自动化
+\datedsubsection{\textbf{西安交通大学}, 西安, 陕西}{2015年8月 -- 2019年7月}
+\textit{本科}\ 电气工程及其自动化
+
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{华为} ~~深圳 ~~\textit{开发工程师A}}{}
+\datedsubsection{\textbf{RAG问答系统开发}}{2025年1月 -- 至今}
+\begin{onehalfspacing}
+主导Deveco Studio开发者智能问答系统建设，基于RAG架构实现技术文档智能检索与生成，内部日均使用人次300+, 问题解决反馈占比25\%
+\begin{itemize}
+  \item 主导Deveco Studio开发者智能问答系统建设，基于RAG架构实现技术文档智能检索与生成，内部日均使用人次300+, 问题解决反馈占比25\%
+  \item 技术文档递归分块：针对开发文档、需求说明书文档层级结构特性，采用层级递归的分块策略，通过BAAI/bge模型对分块进行向量编码，存入Milvus向量数据库（Recall@5为81.2\%）
+  \item 搭建混合召回引擎：融合BM25关键词检索与BAAI/bge-me语义检索，实现多路召回结果加权融合，在400条集上recall@5提升至86.7\%
+  \item 优化生成模型效果：基于历史3000+条高质量QA数据微调Qwen-32B，采用LoRA轻量化训练策略，自动化评测显示回答准确率由68\%提升至79\%
+\end{itemize}
+
+\datedsubsection{\textbf{DevEco Studio 调试开发}}{2022年10月 -- 2024年12月}
+\begin{onehalfspacing}
+负责DevEco Studio 调试团队管理运作以及需求交付
+\begin{itemize}
+  \item 对调试启动流程进行优化，对断点进行批处理，sourcemap进行按需加载，实现调试启动速度提升90\%(3000+文件工程调试启动时间由30s降低至3s)， 内存占用降低30\%(2GB -> 1.4GB)
+  \item 完成ArkTs与Cpp跨语言调试方案设计，实现ArkTs与Cpp跨语言堆栈融合以及无缝单步调试，并申请专利一项
+  \item 设计开发release堆栈反混淆工具，提升开发者日志定位效率，用户使用率占DevEco Studio 用户总数85\%。
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
+\role{\LaTeX, Python}{个人项目}
+\begin{onehalfspacing}
+优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+\begin{itemize}
+  \item 容易定制和扩展
+  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
+  \item 支持 FontAwesome 4.5.0
+\end{itemize}
+\end{onehalfspacing}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faCogs\ IT 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 编程语言: C == Python > C++ > Java
+  \item 平台: Linux
+  \item 开发: xxx
+\end{itemize}
+
+\section{\faHeartO\ 获奖情况}
+\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
+\datedline{其他奖项}{2015}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 技术博客: http://blog.yours.me
+  \item GitHub: https://github.com/username
+  \item 语言: 英语 - 熟练(TOEFL xxx)
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
